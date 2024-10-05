@@ -61,7 +61,7 @@ const main = async () => {
         };
 
         // store data auctions
-        await hbee.put('auctions', Buffer.from(JSON.stringify(auctions)));
+        await hbee.put(auctionId, Buffer.from(JSON.stringify(auctions[auctionId])));
         console.log(`Auction created: ${auctionId} for item ${req.item} at ${req.startingPrice} USDt`);
 
         return Buffer.from(JSON.stringify({ auctionId, data: auctions[auctionId] }), 'utf-8'); // Return auction ID & data
@@ -100,9 +100,11 @@ const main = async () => {
 
         // Mark auction as closed
         auction.status = 'closed';
+
+        await hbee.put(req.auctionId, Buffer.from(JSON.stringify(auction)));
+
         console.log(`Auction ${req.auctionId} closed`);
         console.log(`Winner for ${auction.item} by ${auction.highestBidder} at ${auction.highestBid} USDt`);
-
         return Buffer.from(JSON.stringify({ message: `Auction ${auction.item} closed`, winner: auction.highestBidder, amount: auction.highestBid }), 'utf-8');
     });
 };
