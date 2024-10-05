@@ -1,0 +1,19 @@
+{
+  "name": "distributed-bid-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "start": "node ./src/server"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hyperswarm/rpc": "^3.3.2",
+    "crypto": "^1.0.1",
+    "hyperbee": "^2.20.2",
+    "hypercore": "^10.37.25",
+    "hyperdht": "^6.18.2"
+  }
+}
