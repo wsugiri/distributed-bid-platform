@@ -4,3 +4,4 @@ node_modules
 
 # ignore this files
 package-lock.json
+publickey
