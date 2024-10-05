@@ -60,6 +60,8 @@ const main = async () => {
             status: 'open'
         };
 
+        // store data auctions
+        await hbee.put('auctions', Buffer.from(JSON.stringify(auctions)));
         console.log(`Auction created: ${auctionId} for item ${req.item} at ${req.startingPrice} USDt`);
 
         return Buffer.from(JSON.stringify({ auctionId, data: auctions[auctionId] }), 'utf-8'); // Return auction ID & data
