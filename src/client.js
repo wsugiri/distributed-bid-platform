@@ -67,7 +67,7 @@ const main = async () => {
     await placeBid(auctionId1, 'Client#3', 75.5);         // Place another bid
     await placeBid(auctionId1, 'Client#2', 80);           // Place another bid
     await placeBid(auctionId2, 'Client#2', 70);           // Place a bid
-    await placeBid(auctionId2, 'Client#4', 85);           // Place a bid
+    await placeBid(auctionId2, 'Client#4', 90);           // Place a bid
 
     await closeAuction(auctionId1);                       // Close the auction1
     await closeAuction(auctionId2);                       // Close the auction2
