@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node tests",
-    "start": "node ./src/server"
+    "start": "node ./src/server",
+    "client": "node ./src/client"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +16,8 @@
     "hyperbee": "^2.20.2",
     "hypercore": "^10.37.25",
     "hyperdht": "^6.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4"
   }
 }
